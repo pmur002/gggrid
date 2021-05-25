@@ -1,0 +1,12 @@
+Package: gggrid
+Type: Package
+Title: Draw with 'grid' in 'ggplot2'
+Version: 0.1-0
+Authors@R: c(person("Paul", "Murrell", email = "paul@stat.auckland.ac.nz",
+                    role = c("aut", "cre")))
+Maintainer: Paul Murrell <paul@stat.auckland.ac.nz>
+Description: Defines 'ggplot2' Geoms that allow raw 'grid' code to be used
+             to draw within a 'ggplot2' plot.
+Depends: grid, ggplot2
+URL: 
+License: GPL-3
