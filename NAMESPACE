@@ -1,3 +1,6 @@
 
+import(grid)
+import(ggplot2)
+
 export("grid_panel",
        "grid_group")
