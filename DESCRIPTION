@@ -8,5 +8,7 @@ Maintainer: Paul Murrell <paul@stat.auckland.ac.nz>
 Description: Defines 'ggplot2' Geoms that allow raw 'grid' code to be used
              to draw within a 'ggplot2' plot.
 Depends: grid, ggplot2
-URL: 
+Suggests: knitr, rmarkdown, vwline
+URL: https://github.com/pmur002/gggrid
+VignetteBuilder: knitr
 License: GPL-3
