@@ -11,10 +11,14 @@
 \usage{
 grid_panel(grob = nullGrob(),
            mapping = NULL, data = NULL, stat = "identity",
-           position = "identity", inherit.aes = TRUE, debug = NULL, ...)
+           position = "identity", inherit.aes = TRUE, 
+           show.legend = FALSE, key_glyph = NULL,
+           debug = NULL, ...)
 grid_group(grob = nullGrob(),
            mapping = NULL, data = NULL, stat = "identity",
-           position = "identity", inherit.aes = TRUE, debug = NULL, ...)
+           position = "identity", inherit.aes = TRUE, 
+           show.legend = FALSE, key_glyph = NULL, 
+           debug = NULL, ...)
 }
 \arguments{
   \item{grob}{
@@ -30,6 +34,13 @@ grid_group(grob = nullGrob(),
     two arguments (\code{data} and \code{coords}) and will usually
     just print debugging output of some kind.
   }
+  \item{show.legend}{
+    Logical indicating whether \code{grob} should contribute to the
+    legend.
+  }
+  \item{key_glyph}{
+    A function to draw the key glyph in the legend.
+  }
   \item{\dots}{
     Other arguments passed on to \code{ggplot2::layer()}.
   }
@@ -40,6 +51,10 @@ grid_group(grob = nullGrob(),
 
   The \code{grid_group()} function will draw the \code{grob}, or call the
   \code{grob} function, once for each \pkg{ggplot2} group.
+}
+\note{
+  When adding a \code{key_glyph}, the call to \code{grid_panel()} or
+  \code{grid_group()} must include an explicit \code{mapping}.
 }
 \author{
   Paul Murrell

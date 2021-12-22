@@ -2,5 +2,7 @@
 import(grid)
 import(ggplot2)
 
+importFrom("utils", "packageVersion")
+
 export("grid_panel",
        "grid_group")

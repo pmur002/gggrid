@@ -110,6 +110,39 @@ ggplot(minard,
     grid_group(path)
 ```
 
+The above plot has no legend, but it is possible to add one
+with a little more work.  There are three important steps:
+
+1. Set `show.legend=TRUE`
+1. Set `key_glyph` to be a function that produces a grob 
+   (to draw an item in the legend)
+1. Set an explicit mapping in the `grid_group()` call
+   (rather than just having `grid_group()` inherit a mapping).
+
+The following code demonstrates these steps, including defining 
+a `path_key()` function that draws a variable-width line
+in the legend, to show the relationship between `colour`
+and `direction`.
+
+We have excluded the `size` legend in this case
+(with `guide="none"`) to keep the `path_key()` function relatively simple.  
+
+```{r fig.width=6, fig.height=2}
+path_key <- function(data, ...) {
+    vwlineGrob(0:1, c(.5, .5), w=unit(c(.1, .2), "in"),
+               gp=gpar(col=data$colour, 
+                       fill=adjustcolor(data$colour, alpha=.5)))
+}
+ggplot(minard) + 
+    scale_size(range=c(.01, .5), guide="none") +
+    coord_fixed(2, clip="off") +
+    grid_group(path, 
+               aes(x=long, y=lat, size=survivors, colour=direction, 
+                   group=interaction(group, direction)),
+               show.legend=TRUE, 
+               key_glyph=path_key)
+```
+
 The Minard data used in the example above comes from 
 the supplementary materials that were published with
 @wickham-GoG.
