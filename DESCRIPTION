@@ -5,8 +5,9 @@ Version: 0.1-1
 Authors@R: c(person("Paul", "Murrell", email = "paul@stat.auckland.ac.nz",
                     role = c("aut", "cre")))
 Maintainer: Paul Murrell <paul@stat.auckland.ac.nz>
-Description: Defines 'ggplot2' Geoms that allow raw 'grid' code to be used
-             to draw within a 'ggplot2' plot.
+Description: An extension of 'ggplot2' that makes it easy to add
+             raw 'grid' output, such as customised annotations, to a 
+             'ggplot2' plot.  
 Depends: grid, ggplot2
 Suggests: knitr, rmarkdown, vwline
 URL: https://github.com/pmur002/gggrid,https://stattech.wordpress.fos.auckland.ac.nz/2021/05/31/2021-01-accessing-grid-from-ggplot2/
