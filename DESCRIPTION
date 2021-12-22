@@ -1,7 +1,7 @@
 Package: gggrid
 Type: Package
 Title: Draw with 'grid' in 'ggplot2'
-Version: 0.1-1
+Version: 0.1-2
 Authors@R: c(person("Paul", "Murrell", email = "paul@stat.auckland.ac.nz",
                     role = c("aut", "cre")))
 Maintainer: Paul Murrell <paul@stat.auckland.ac.nz>

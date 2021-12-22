@@ -16,8 +16,7 @@ draw_grid_group <- function(data, panel_params, coord, grob, debug) {
 
 GeomGridGroup <- ggproto("GeomGridGroup", Geom,
                          ## No required_aes
-                         ## Allow values to be passed in
-                         default_aes = aes(x = NULL),
+                         ## No default_aes
                          ## No draw_key
                          draw_group = draw_grid_group)
 	
@@ -35,7 +34,8 @@ grid_group <- function(grob=nullGrob(),
           stat = stat, 
           position = position,
           inherit.aes = inherit.aes,
-          show.legend = FALSE, 
+          check.aes = FALSE,
+          show.legend = FALSE,
           params = list(grob = grob, debug = debug, ...))
 }
 

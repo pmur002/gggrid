@@ -25,7 +25,8 @@ GeomGridPanel <- ggproto("GeomGridPanel", Geom,
 grid_panel <- function(grob=nullGrob(),
                        mapping = NULL, data = NULL, stat = "identity",
                        position = "identity", inherit.aes = TRUE,
-                       debug = NULL, ...) {
+                       debug = NULL,
+                       ...) {
     if (!is.grob(grob) && !is.function(grob))
         stop("Invalid 'grob' argument;  must be grob or function")
     if (!is.null(debug) && !is.function(debug))
@@ -36,7 +37,8 @@ grid_panel <- function(grob=nullGrob(),
           stat = stat, 
           position = position,
           inherit.aes = inherit.aes,
-          show.legend = FALSE, 
+          check.aes = FALSE,
+          show.legend = FALSE,
           params = list(grob = grob, debug = debug, ...))
 }
 
