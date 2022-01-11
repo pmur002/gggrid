@@ -3,13 +3,11 @@ title: "Getting Started with 'gggrid'"
 output:
   html_document
 vignette: >
-  %\VignetteIndexEntry{Getting Started with \pkg{gggrid}}
+  %\VignetteIndexEntry{Getting Started with 'gggrid'}
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
 bibliography: gggrid.bib
 ---
-
-# Getting Started with 'gggrid'
 
 The 'gggrid' package provides two functions: `grid_panel()`
 and `grid_group()`.  Both functions add 'grid' output to 

@@ -37,7 +37,7 @@ grid_panel <- function(grob=nullGrob(),
     } else {
         default_aes = aes()
     }
-   GeomGridPanel <- ggproto("GeomGridPanel", Geom,
+    GeomGridPanel <- ggproto("GeomGridPanel", Geom,
                              required_aes = required_aes,
                              default_aes = default_aes,
                              draw_panel = draw_grid_panel)
