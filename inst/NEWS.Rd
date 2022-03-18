@@ -1,6 +1,14 @@
 \name{NEWS}
 \title{News for Package \pkg{gggrid}}
 
+\section{Changes in version 0.2-1}{
+  \itemize{
+    \item Allow \code{"gList"} as \code{grob} argument.
+
+    Suggested by Casper Hart.
+  }
+}
+
 \section{Changes in version 0.2-0}{
   \itemize{
     \item Add support for defining key glyph for legend.

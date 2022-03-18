@@ -20,6 +20,8 @@ grid_group <- function(grob=nullGrob(),
                        show.legend = FALSE,
                        key_glyph = NULL,
                        debug = NULL, ...) {
+    if (inherits(grob, "gList"))
+        grob <- gTree(children=grob)
     if (!is.grob(grob) && !is.function(grob))
         stop("Invalid 'grob' argument;  must be grob or function")
     if (!is.null(debug) && !is.function(debug))
